@@ -27,5 +27,11 @@ Route::get('/admin', [LoginAdminController::class, 'loginAdmin'])->name('loginad
 Route::post('actionlogin', [LoginAdminController::class, 'action'])->name('actionlogin');
 
 Route::get('/dashboard', function () {
-    return view('welcome');
+    return view('admin.pages.dashboard');
 })->name ('dashboard');
+
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
+    Route::get('logoutAdmin', [LoginAdminController::class, 'logoutAdmin'])->name('logoutadmin');
+    
+});

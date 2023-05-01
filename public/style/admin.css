@@ -1,0 +1,54 @@
+.navbar-brand.brand-logo{
+    display: flex;
+}
+
+.navbar-brand.brand-logo p{
+    padding: 10px 0 5px 0;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar-brand.brand-logo span{
+    color: #767E91;
+}
+
+.navbar-brand.brand-logo-mini img{
+    width: 100% !important;
+}
+
+.title{
+    margin-bottom: 4rem;
+}
+
+/* dashboard page */
+.dashboard-container{
+    padding: 0;
+}
+
+.chart-container{
+    float: left;;
+    width: 80%;
+}
+
+.side-menu-container{
+    float: right;
+    width: 20%;
+}
+
+.side-menu-container li{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.side-menu-container li img{
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+}
+
+.side-menu-container li p{
+    text-align: center;
+    margin-top: 10px;
+}
