@@ -14,16 +14,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call([
+            CategorySeeder::class,
+        ]);
          DB::table('admins')->insert([
 
-            'name' => 'Vanny Clarita',
+            'name' => 'Deadi Artana',
 
-            'username' => 'vannyclarita@gmail.com',
+            'username' => 'deadi@gmail.com',
 
-            'password' => Hash::make('vanny123'),
+            'password' => Hash::make('deadi123'),
 
             'phone' => '0821473960666'
 
         ]);
+
+
     }
 }

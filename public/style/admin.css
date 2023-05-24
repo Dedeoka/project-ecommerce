@@ -52,3 +52,30 @@
     text-align: center;
     margin-top: 10px;
 }
+
+.category-container{
+    padding: 0;
+}
+
+.card-head{
+    padding: 0;
+}
+
+.card-title{
+    float: left;
+}
+
+.tambah-btn{
+    float: right;
+    background-image: linear-gradient(to bottom right, #E4C0B1, #B19650, #6A5827);
+    border-radius: 30px;
+    font-weight: bolder;
+}
+
+.refresh-btn{
+    float: right;
+    border-radius: 30px;
+    margin-left: 10px;
+    color: #B1866E;
+    font-weight: bolder;
+}

@@ -6,7 +6,6 @@ use AuthenticatesUsers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use RealRashid\SweetAlert\Facades\Alert;
 
 
 class LoginAdminController extends Controller
@@ -19,7 +18,7 @@ class LoginAdminController extends Controller
     public function action(Request $request){
         if(Auth::guard('admin')->attempt(['username' => $request->username, 'password' => $request->password])){
             // Alert::success('Congrats', 'Login Successfully ');
-            return redirect()->route('dashboard');
+            return redirect()->route('admin.dashboard');
             //return dd(Auth::guard('admin'));
             //return dd(request()->all());
         }else{

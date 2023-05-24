@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product_review extends Model
 {
+    protected $guarded = ['id'];
     use HasFactory;
+
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
+    public function responses(){
+        return $this->hasMany(Response::class,'review_id');
+    }
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Courier extends Model
 {
+    protected $guarded = ['id'];
     use HasFactory;
+
+    use HasFactory;
+    public function transactions(){
+        return $this->hasMany(Transaction::class);
+    }
 }

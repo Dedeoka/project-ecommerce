@@ -7,5 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaction extends Model
 {
+    protected $guarded = ['id'];
     use HasFactory;
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function courier(){
+        return $this->belongsTo(Courier::class);
+    }
+
+    public function details(){
+        return $this->hasMany(Transaction_detail::class);
+    }
 }
